@@ -7,6 +7,11 @@ var landing = document.getElementById('landing-info');
 var imageOverlay = document.querySelectorAll(".gallery .hover");
 
 var links = document.querySelectorAll(".hover a");
+var worksGroup = document.querySelectorAll('.group');
+var arrowLeft = document.getElementById("left-arrow");
+var arrowRight = document.getElementById("right-arrow");
+
+
 
 console.log(imageOverlay[0]);
 $(right).css('display','none');
@@ -31,3 +36,41 @@ for(var i = 0; i < imageOverlay.length; i++){
     this.classList.toggle("overlay");
   });
 }
+
+var currentIndex = 0;
+
+function reset(){
+  for(let i = 0; i<worksGroup.length; i++){
+    worksGroup[i].style.display ="none";
+  }
+}
+
+function startSlide(){
+  reset();
+  worksGroup[0].style.display = "block";
+}
+
+function slideLeft(){
+  reset();
+  worksGroup[currentIndex-1].style.display = "block";
+  currentIndex--;
+}
+
+function slideRight(){
+  reset();
+  worksGroup[currentIndex+1].style.display = "block";
+  currentIndex++;
+}
+arrowLeft.addEventListener("click", function(){
+  if(currentIndex === 0){
+    currentIndex = worksGroup.length;
+  }
+  slideLeft();
+})
+arrowRight.addEventListener("click", function(){
+  if(currentIndex === worksGroup.length-1){
+    currentIndex = -1;
+  }
+  slideRight();
+})
+startSlide();
