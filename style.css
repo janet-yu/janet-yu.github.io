@@ -8,9 +8,11 @@
   height:100vh;
   width:100vw;
   position:relative;
-
 }
 
+#landing-info{
+  text-align: center;
+}
 .left{
   width:26rem;
   position: relative;
@@ -29,7 +31,6 @@
   position:relative;
   margin:10px;
   top:1rem;
-  width:100%;
   box-shadow:2px 1px 1px rgba(0,50,140,0.5);
   font:15px/1.2rem "Roboto Mono";
 }
@@ -58,13 +59,20 @@
   }
 
 }
+
 #enter{
-  width:10%;
   cursor:pointer;
-  position:absolute;
-  display:block;
-  right:-60px;
-  top:4.5rem;
+  top:1rem;
+  display: inline-block;
+  margin:0 auto;
+  position: relative;
+  font:1.5rem/1 "Raleway";
+  text-transform: uppercase;
+  padding:.4rem;
+}
+#enter:hover{
+  background-color: black;
+  color:white;
 }
 .left li{
   display:inline;
@@ -127,5 +135,14 @@ ul li{
   }
   100%{
     opacity:1;
+  }
+}
+
+@media screen and (min-width:600px){
+
+}
+@media screen and (max-width:600px){
+  .left{
+    width:80vw;
   }
 }

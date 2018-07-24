@@ -1,29 +1,26 @@
 var left = document.getElementsByClassName('left')[0];
 var about = document.getElementById('about');
 var right = document.getElementsByClassName('right')[0];
-var nav = document.querySelector("navbar");
+var nav = document.querySelector("nav");
 var landing = document.getElementById('landing-info');
 
 var imageOverlay = document.querySelectorAll(".gallery .hover");
-
+var body = document.querySelector('body');
 var links = document.querySelectorAll(".hover a");
 var worksGroup = document.querySelectorAll('.group');
 var arrowLeft = document.getElementById("left-arrow");
 var arrowRight = document.getElementById("right-arrow");
 
-
-
-console.log(imageOverlay[0]);
-$(right).css('display','none');
+$(body).css('display','none');
 $(nav).css('display','none');
 $(document).ready(function(){
-  $(right).fadeIn();
+  $(body).fadeIn();
   $(nav).fadeIn();
   $('a').on("click", function(e){
     var page = this.getAttribute('href');
     console.log(page);
     e.preventDefault();
-    $(right).fadeOut(function(){
+    $(body).fadeOut(function(){
       setTimeout(function(){
           window.location = page;
       },100);
