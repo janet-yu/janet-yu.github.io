@@ -12,14 +12,7 @@
 
 }
 
-/* .left{
-  width:25%;
-  position: fixed;
-  top:50%;
-  left:12%;
-  transition:all 0.5s ease-in-out;
-  transform: translate(2%, -40%);
-}*/
+
 .left img{
   width:100%;
 }
