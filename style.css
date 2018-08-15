@@ -1,4 +1,7 @@
 /*RESET STYLES HTML5DOCTOR*/
+*{
+  box-sizing: border-box;
+}
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,  pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i {
      margin:0;
      padding:0;
@@ -136,9 +139,6 @@ main p{
   max-width:1000px;
   padding:5px 5px 20px 5px;
 }
-#about{
-  margin: 1em 0 0 0;
-}
 main h1{
   font:4.5em/1 "Montserrat", sans-serif;
   margin:0 0 .2em 0;
@@ -226,10 +226,10 @@ hr, .page img{
   /*MAIN CONTENT*/
   main{
     width:100%;
-    margin:0 1em;
   }
   section{
     width:95%;
+    margin:1em auto;
   }
   .arrow::before, .arrow::after{
     display:none;
@@ -306,5 +306,17 @@ hr, .page img{
     background-color:#aaa;
     width:100%;
     margin:0 0 1em 0;
+  }
+}
+/*iPhone SE*/
+@media screen and (max-width:350px){
+  header h1{
+    font-size:4.5em;
+  }
+  section h1{
+    font-size:3.5em;
+  }
+  #about p{
+    font-size:1.1em;
   }
 }
