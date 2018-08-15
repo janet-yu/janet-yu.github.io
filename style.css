@@ -1,6 +1,7 @@
 /*RESET STYLES HTML5DOCTOR*/
 *{
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote,  pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i {
      margin:0;
@@ -78,13 +79,21 @@ header::before{
 }
 .arrow::before{
   right:50%;
-  transform-origin: 100% 100%;
-  transform: skew(60deg);
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: skew(60deg);
+      -ms-transform: skew(60deg);
+          transform: skew(60deg);
 }
 .arrow::after{
   left:50%;
-  transform-origin:0% 100%;
-  transform:skew(-60deg);
+  -webkit-transform-origin:0% 100%;
+      -ms-transform-origin:0% 100%;
+          transform-origin:0% 100%;
+  -webkit-transform:skew(-60deg);
+      -ms-transform:skew(-60deg);
+          transform:skew(-60deg);
 }
 header h1, header h2, .social-media a{
   color:#fff;
@@ -112,13 +121,19 @@ header h2{
   position: relative;
   top:-65px;
   font-size:3em;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
   background-color: transparent;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .fa {
   padding:0 20px;
   margin-right:100px;
+  -webkit-transition: color .3s ease-in-out;
+  -o-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
 .fa:hover{
@@ -142,9 +157,6 @@ main p{
 main h1{
   font:4.5em/1 "Montserrat", sans-serif;
   margin:0 0 .2em 0;
-}
-main h1, main p{
-  margin-right: 50px;
 }
 section{
   margin: 2em 0;
@@ -177,10 +189,14 @@ hr, .page img{
   top:50%;
 }
 .left-arrow{
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 .right-arrow{
-  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
   right:0;
 }
 /*works individual pages*/
@@ -193,8 +209,11 @@ hr, .page img{
   margin:1em auto;
 }
 .page-three{
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  flex-wrap:wrap;
+  -ms-flex-wrap:wrap;
+      flex-wrap:wrap;
   width:100%;
 }
 .page-three img{
@@ -203,8 +222,11 @@ hr, .page img{
 }
 
 .group{
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  justify-content:space-around;
+  -ms-flex-pack:distribute;
+      justify-content:space-around;
 }
 /*CONTACT*/
 #contact p{
@@ -238,7 +260,8 @@ hr, .page img{
     padding-bottom:80px;
   }
   .social-media{
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   /*social media icons reset margins*/
   .fa{
@@ -248,8 +271,13 @@ hr, .page img{
 
 @media screen and (max-width:500px){
   .name{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     left:0;
     padding:10px;
   }
@@ -271,11 +299,15 @@ hr, .page img{
     top:102%;
   }
   .left-arrow{
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     left:35%;
   }
   .right-arrow{
-    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+            transform: rotate(135deg);
     right:35%;
   }
   #works{
@@ -285,16 +317,23 @@ hr, .page img{
     width:90%;
   }
   .page-three{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-wrap:wrap;
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
     width:100%;
   }
   .page-three img{
     width:80%;
   }
   .group{
-    flex-direction:column;
-    justify-content:space-around;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
+    -ms-flex-pack:distribute;
+        justify-content:space-around;
   }
   #contact{
     margin-top:6em;
@@ -311,12 +350,12 @@ hr, .page img{
 /*iPhone SE*/
 @media screen and (max-width:350px){
   header h1{
-    font-size:4.5em;
+    font-size:4.3em;
   }
   section h1{
     font-size:3.5em;
   }
   #about p{
-    font-size:1.1em;
+    font-size:1em;
   }
 }
