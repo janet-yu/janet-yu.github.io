@@ -136,13 +136,10 @@ header h2{
   -o-transition: color .3s ease-in-out;
   transition: color .3s ease-in-out;
 }
-.fa:hover{
-  color:#6b66c9;
-}
+.fa:hover,
 .social-media a:visited{
   color:#6b66c9;
 }
-
 /*ABOUT*/
 main{
   width:70%;
@@ -293,8 +290,6 @@ hr, .page img{
   .square{
     width:30px;
     height:30px;
-    border-top:3px solid #000;
-    border-left:3px solid #000;
     position:absolute;
     top:102%;
   }
