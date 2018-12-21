@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+a, p {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+.header {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+  .left, .right {
+    flex: 1;
+    font-family: "Ubuntu";
+    display: flex;
+    align-items: center;
+  }
+  .left {
+    height: inherit;
+    background-color: #69D2E9;
+    color: #FFF;
+    position: relative;
+    justify-content: flex-end;
+  }
+  .left_container, .right_container {
+    margin: 40px;
+  }
+    .left_container {
+      position: relative;
+      top: -20px;
+      margin: 0 97px;
+      text-align: right;
+    }
+    #name, #about {
+      font-size: 5em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    #name, #subtitle {
+      position: relative;
+      z-index: 1;
+      text-align: right;
+    }
+    #name::after, #subtitle::after {
+      display: block;
+      position: absolute;
+      color: #48BAD3;
+      top: 10px;
+      z-index: -1;
+    }
+    #name::after {
+      content: 'JANET YU';
+    }
+    #subtitle {
+      font-size: 2.5em;
+      position: relative;
+      display: inline-block;
+    }
+    #subtitle::after {
+      content: 'art + code';
+      position: absolute;
+      right: 0;
+      top: 6px;
+    }
+    .nav {
+      text-align: right;
+      text-transform: uppercase;
+      margin-top: 20px;
+    }
+      .navigation li {
+        display: block;
+        padding: 5px;
+      }
+      .nav a {
+        color: #FFF;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+  .right {
+    position: relative;
+    justify-content: flex-start;
+  }
+    .right_container {
+      max-width: 450px;
+      margin: 0 97px;
+    }
+      #about, .about_desc {
+        text-align: left;
+      }
+      #about {
+        color: #FFCD6D;
+      }
+      .about_desc {
+        line-height: 1.5;
+        margin-top: 10px;
+        color: #4D6469;
+      }
+      .about_desc:nth-of-type(1) {
+        padding-bottom: 20px;
+      }
+
+@media screen and (max-width: 990px) {
+  .header {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .left, .right {
+    justify-content: center;
+  }
+  .left_container {
+    text-align: center;
+  }
+  #subtitle {
+    text-align: center;
+  }
+  #subtitle::after {
+    content: 'art + code';
+    top: 6px;
+  }
+  .nav {
+    text-align: center;
+  }
+  #about {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .right_container, .left_container {
+    margin: 40px;
+  }
+  #name, #about {
+    font-size: 4em;
+  }
+  #subtitle {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  #name, #about {
+    font-size: 3em;
+  }
+  #name::after {
+    top: 7px;
+  }
+  #subtitle {
+    font-size: 1.5em;
+  }
+}
