@@ -85,6 +85,7 @@ a, p {
       }
   .right {
     position: relative;
+    background-color: #FFF;
     justify-content: flex-start;
   }
     .right_container {
