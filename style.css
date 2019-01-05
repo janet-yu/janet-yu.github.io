@@ -34,8 +34,7 @@ a, p {
   }
     .left_container {
       position: relative;
-      top: -20px;
-      margin: 0 97px;
+      margin: 0 97px 0 0;
       text-align: right;
     }
     #name, #about {
@@ -86,7 +85,6 @@ a, p {
   .right {
     position: relative;
     background-color: #FFF;
-    justify-content: flex-start;
   }
     .right_container {
       max-width: 450px;
@@ -119,6 +117,7 @@ a, p {
   }
   .left_container {
     text-align: center;
+    margin: 0;
   }
   #subtitle {
     text-align: center;
