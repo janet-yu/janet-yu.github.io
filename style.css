@@ -1,127 +1,159 @@
-body{
-  height:100%;
-  width:100%;
-  background-color: #3F3634;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-navbar ul{
-    list-style-type: none;
-    margin: 0 auto;
-}
-navbar li{
-  display: inline;
-  background-color: #DBDBDB;
-}
-navbar li a {
-    font-family: Courier;
-    color: #000;
-    text-decoration: none;
-    text-align: center;
-    padding:10px;
-    font-size: 16px;
-}
-navbar{
-  position: absolute;
-  margin-left:-154px;
-}
-navbar a:hover{
-  background-color: #000000;
-  color: #ffffff;
-  transition:0.5s;
-  font-weight: bold;
-}
-h1{
-  text-align: center;
-  font-family: Courier;
-  color:#F0CECE;
-}
-#about{
-  width:30%;
-  text-align: center;
-  border: 2px solid #F0CECE;
-  margin:auto;
-  padding: 10px;
-  position: relative;
-  min-width: 300px;
-}
-img{ /*research about this*/
-  display: block;
-  margin:auto;
-  width: 200px;
-  margin-top:2%;
-}
-/*resume page */
-#resnav{
-  margin:0 auto;
-  position: absolute;
-  margin-left:26%;
-  margin-top:-10px;
-}
-#resnav ul{
-    list-style-type: none;
-}
-#resbody #resnav li{
-  display: inline;
-  background-color: #DBDBDB;
-  padding:0px;
-  font-size: 14px;
-}
-#resnav li a {
-    font-family: Courier;
-    color: #000;
-    text-decoration: none;
-    text-align: center;
-}
-#resnav a:hover{
-  background-color: #000000;
-  color: #ffffff;
-  transition:0.5s;
-  font-weight: bold;
-}
-#resbody li{
-  font-family: Source Code Pro;
-  color: #F0CECE;
-  font-size: 14px;
-  padding-left: 10px;
 
+ul {
+  list-style: none;
 }
-#about p{
-  color:#F0CECE;
-  font-family: Anonymous Pro;
-  font-size: 16px;
+a, p {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
 }
-#resbody{
-  width:600px;
-  margin: auto;
-  min-width: 400px;
-  border: 2px solid #F0CECE;
-  margin-bottom:20px;
+.header {
+  min-height: 100vh;
+  display: flex;
   position: relative;
 }
-#resbody p{
-  font-family: Source Code Pro;
-  color: #F0CECE;
-  font-size: 14px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-#resbody h2{
-  font-family: Anonymous Pro;
-  color: #F0CECE;
-  padding-left:20px;
-}
-#firstline{
-  width: 95%;
-  margin-top:-10px;
-  border-top: 2px solid #F0CECE;
-}
-#secondline{
-  width: 95%;
-  margin-top:-4px;
-  border-top: 0.5px solid #F0CECE;
-}
-hr{
-  width: 95%;
-  margin-top:-4px;
-  border-top: 1px solid #F0CECE;
+  .left, .right {
+    flex: 1;
+    font-family: "Ubuntu";
+    display: flex;
+    align-items: center;
+  }
+  .left {
+    height: inherit;
+    background-color: #69D2E9;
+    color: #FFF;
+    position: relative;
+    justify-content: flex-end;
+  }
+  .left_container, .right_container {
+    margin: 40px;
+  }
+    .left_container {
+      position: relative;
+      margin: 0 97px 0 0;
+      text-align: right;
+    }
+    #name, #about {
+      font-size: 5em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    #name, #subtitle {
+      position: relative;
+      z-index: 1;
+      text-align: right;
+    }
+    #name::after, #subtitle::after {
+      display: block;
+      position: absolute;
+      color: #48BAD3;
+      top: 10px;
+      z-index: -1;
+    }
+    #name::after {
+      content: 'JANET YU';
+    }
+    #subtitle {
+      font-size: 2.5em;
+      position: relative;
+      display: inline-block;
+    }
+    #subtitle::after {
+      content: 'art + code';
+      position: absolute;
+      right: 0;
+      top: 6px;
+    }
+    .nav {
+      text-align: right;
+      text-transform: uppercase;
+      margin-top: 20px;
+    }
+      .navigation li {
+        display: block;
+        padding: 5px;
+      }
+      .nav a {
+        color: #FFF;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+  .right {
+    position: relative;
+    background-color: #FFF;
+  }
+    .right_container {
+      max-width: 450px;
+      margin: 0 97px;
+    }
+      #about, .about_desc {
+        text-align: left;
+      }
+      #about {
+        color: #FFCD6D;
+      }
+      .about_desc {
+        line-height: 1.5;
+        margin-top: 10px;
+        color: #4D6469;
+      }
+      .about_desc:nth-of-type(1) {
+        padding-bottom: 20px;
+      }
 
+@media screen and (max-width: 990px) {
+  .header {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .left, .right {
+    justify-content: center;
+  }
+  .left_container {
+    text-align: center;
+    margin: 0;
+  }
+  #subtitle {
+    text-align: center;
+  }
+  #subtitle::after {
+    content: 'art + code';
+    top: 6px;
+  }
+  .nav {
+    text-align: center;
+  }
+  #about {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .right_container, .left_container {
+    margin: 40px;
+  }
+  #name, #about {
+    font-size: 4em;
+  }
+  #subtitle {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  #name, #about {
+    font-size: 3em;
+  }
+  #name::after {
+    top: 7px;
+  }
+  #subtitle {
+    font-size: 1.5em;
+  }
 }
