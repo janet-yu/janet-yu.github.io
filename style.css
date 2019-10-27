@@ -4,156 +4,180 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-blue: #303C66;
+  --primary-yellow: #FBE7BF;
+}
+
 ul {
   list-style: none;
 }
 a, p {
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
-.header {
+
+p {
+  color: #4D6469;
+  line-height: 1.4;
+}
+body, html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+}
+
+h1,
+h2 {
+  color: var(--primary-blue);
+  font-family: "Karla", sans-serif;
+}
+.hide {
+  display: none;
+}
+
+.main-container {
   min-height: 100vh;
   display: flex;
   position: relative;
+  flex-direction: column;
 }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .left, .right {
-    flex: 1;
     font-family: "Ubuntu";
     display: flex;
-    align-items: center;
-  }
-  .left {
-    height: inherit;
-    background-color: #69D2E9;
-    color: #FFF;
-    position: relative;
-    justify-content: flex-end;
-  }
-  .left_container, .right_container {
-    margin: 40px;
-  }
-    .left_container {
-      position: relative;
-      margin: 0 97px 0 0;
-      text-align: right;
-    }
-    #name, #about {
-      font-size: 5em;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-    #name, #subtitle {
-      position: relative;
-      z-index: 1;
-      text-align: right;
-    }
-    #name::after, #subtitle::after {
-      display: block;
-      position: absolute;
-      color: #48BAD3;
-      top: 10px;
-      z-index: -1;
-    }
-    #name::after {
-      content: 'JANET YU';
-    }
-    #subtitle {
-      font-size: 2.5em;
-      position: relative;
-      display: inline-block;
-    }
-    #subtitle::after {
-      content: 'art + code';
-      position: absolute;
-      right: 0;
-      top: 6px;
-    }
-    .nav {
-      text-align: right;
-      text-transform: uppercase;
-      margin-top: 20px;
-    }
-      .navigation li {
-        display: block;
-        padding: 5px;
-      }
-      .nav a {
-        color: #FFF;
-        font-weight: bold;
-        letter-spacing: 2px;
-      }
-  .right {
-    position: relative;
-    background-color: #FFF;
-  }
-    .right_container {
-      max-width: 450px;
-      margin: 0 97px;
-    }
-      #about, .about_desc {
-        text-align: left;
-      }
-      #about {
-        color: #FFCD6D;
-      }
-      .about_desc {
-        line-height: 1.5;
-        margin-top: 10px;
-        color: #4D6469;
-      }
-      .about_desc:nth-of-type(1) {
-        padding-bottom: 20px;
-      }
-
-@media screen and (max-width: 990px) {
-  .header {
     flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 790px) {
-  .left, .right {
     justify-content: center;
   }
-  .left_container {
-    text-align: center;
-    margin: 0;
-  }
-  #subtitle {
-    text-align: center;
-  }
-  #subtitle::after {
-    content: 'art + code';
-    top: 6px;
-  }
-  .nav {
-    text-align: center;
-  }
-  #about {
-    text-align: center;
-  }
-}
 
-@media screen and (max-width: 560px) {
-  .right_container, .left_container {
-    margin: 40px;
+  .left {
+    background-color: var(--primary-yellow);
+    border-bottom: 10px solid #2E4080;
+    padding: 50px 0;
+    text-align: center;
   }
-  #name, #about {
-    font-size: 4em;
+
+    #mobile-name {
+      font-size: 3em;
+    }
+
+    .about-desc:first-of-type {
+      margin-top: 1em;
+    }
+
+    .navigation {
+      display: flex;
+      justify-content: space-between;
+      text-transform: uppercase;
+      margin-top: 1em;
+    }
+      .navigation a {
+        color: #2E4080;
+        position: relative;
+      }
+
+      .navigation a::after {
+        content: '';
+        height: 2px;
+        position: absolute;
+        width: 100%;
+        bottom: -2px;
+        left: 0;
+        transform: scaleX(0);
+        background-color: var(--primary-blue);
+        transition: all .5s ease;
+      }
+
+      .navigation a:hover::after{
+        transform: scaleX(1);
+      }
+
+  .right {
+    padding: 30px 0;
   }
+
+    #right-name {
+      font-size: 4em;
+      display: none;
+      letter-spacing: 2px;
+    }
+
+    #subtitle {
+      display: none;
+    }
+
+    #hello {
+      font-size: 2em;
+    }
+
+@media screen and (min-width: 728px) {
+  #right-name,
   #subtitle {
+    display: block;
+  }
+
+  #mobile-name {
+    display: none;
+  }
+
+  #subtitle {
+    color: #C9C9C9;
+    font-weight: lighter;
+    font-style: italic;
+    margin-left: .3em;
     font-size: 2em;
+    font-family: "Ubuntu", "Karla", sans-serif;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .main-container {
+    flex-direction: row;
+    max-width: 43em;
+    min-height: auto;
+  }
+
+  .left {
+    min-height: 28.125em;
+    flex: .5;
+    background: var(--primary-yellow) url('images/web_bg.svg') no-repeat bottom;
+  }
+
+    #hello {
+      display: none;
+    }
+
+    .navigation {
+      flex-direction: column;
+      text-align: right;
+    }
+      .navigation li {
+        margin: 5px 0;
+        font-size: 1.2em;
+      }
+
+  .right {
+    flex: 1;
+  }
+
+  .about-desc:first-of-type {
+    margin-top: 0;
   }
 }
 
-@media screen and (max-width: 390px) {
-  #name, #about {
-    font-size: 3em;
-  }
-  #name::after {
-    top: 7px;
-  }
-  #subtitle {
-    font-size: 1.5em;
+
+@media screen and (min-width: 1900px) {
+  body {
+    font-size: 1.2em;
   }
 }
