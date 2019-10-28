@@ -47,9 +47,6 @@ h2 {
 
   .left, .right {
     font-family: "Ubuntu";
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   .left {
@@ -73,6 +70,7 @@ h2 {
       text-transform: uppercase;
       margin-top: 1em;
     }
+    
       .navigation a {
         color: #2E4080;
         position: relative;
@@ -147,6 +145,12 @@ h2 {
     flex-direction: row;
     max-width: 43em;
     min-height: auto;
+  }
+
+  .left, .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .left {
