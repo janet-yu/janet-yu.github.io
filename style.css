@@ -70,7 +70,7 @@ h2 {
       text-transform: uppercase;
       margin-top: 1em;
     }
-    
+
       .navigation a {
         color: #2E4080;
         position: relative;
@@ -147,7 +147,7 @@ h2 {
     min-height: auto;
   }
 
-  .left, .right {
+  .left, .right { /* this apparently messed with my mobile view */
     display: flex;
     flex-direction: column;
     justify-content: center;
