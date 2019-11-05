@@ -9,7 +9,6 @@
   box-sizing: border-box;
 }
 
-
 header, main {
   max-width: 1024px;
   margin: 0 auto;
@@ -40,8 +39,8 @@ nav {
 
 header ul > li{
   display: inline-block;
-  font-size: 1.2em;
-  margin: 0 20px;
+  font-size: 1.1em;
+  margin: 0 10px;
 }
 
 nav a {
@@ -74,7 +73,6 @@ hr {
 }
 
 .project-container {
-  /* display: flex; */
   margin: 2em 0;
 }
   .project-container h3 {
@@ -88,9 +86,11 @@ hr {
   .project-container ul li {
     margin-left: 2em;
   }
+
   .project-container a {
     color: #4161d1;
   }
+
   .project-container a:hover {
     font-weight: bold;
   }
@@ -121,10 +121,16 @@ hr {
      display: flex;
   }
     .project-container img {
+      flex: 1;
       width: 50%;
+      flex-basis: 50%;
       margin-right: 1.2em;
     }
 
+    .project-desc {
+      flex: 1;
+      flex-basis: 50%;
+    }
 
   .ui-imgs img {
     width: 80%;
