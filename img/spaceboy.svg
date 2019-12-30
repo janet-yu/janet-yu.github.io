@@ -1,30 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Janet Yu</title>
-  <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css?family=Archivo|Karla&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="container">
-    <div class="name-container">
-      <h1 class="name">Janet Yu</h1>
-    </div>
-    <p class="bio">Hello! I am currently a junior in Computer Science, and am hoping to pursue a career in UI design and front end devlopment. I am currently self-studying HTML/CSS/JavaScript.</p>
-    <nav>
-      <ul class="navigation">
-        <li class="nav__list-item"><a href="portfolio.html">Portfolio</a></li>
-        <li class="nav__list-item"><a href="resume.pdf" target="_blank">Resume</a></li>
-        <li class="nav__list-item"><a href="https://github.com/janet-yu" target="_blank">github</a></li>
-        <li class="nav__list-item"><a href="https://www.linkedin.com/in/janet-yu99/" target="_blank">linkedin</a></li>
-        <li class="nav__list-item"><a href="https://www.instagram.com/janettyoo/" target="_blank">instagram</a></li>
-      </ul>
-    </nav>
-  </div>
-</body>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -117,7 +91,7 @@
   <title
      id="title17">spaceboy</title>
   <g
-     id="closer-planet">
+     id="g946">
     <circle
        id="circle19"
        r="102"
@@ -338,7 +312,7 @@
      transform="translate(-591 -327)"
      id="path107" />
   <g
-     id="faraway-planet">
+     id="g951">
     <circle
        id="circle21"
        r="30"
@@ -426,4 +400,3 @@
      transform="translate(-591 -327)"
      id="path127" />
 </svg>
-</html>
