@@ -5,69 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="portfolio.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto|Karla|Rubik" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Archivo|Karla&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <title>Portfolio</title>
 </head>
 <body>
-  <header>
-    <h1 id="portfolio-title">PROJECTS</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">home</a></li>
-        <li><a href="https://github.com/janet-yu" target="_blank">github</a></li>
-        <li><a href="resume.pdf" target="_blank">resume</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="container projects">
-      <div class="project-container">
-        <img src="images/budget_tracker.png" alt="">
-        <div class="project-desc">
-          <h3>Budget Tracker v1</h3>
-          <a href="">Code •</a>
-          <a href="">Live Demo</a>
-          <hr>
-          <p>Simple budget tracker at the moment that supports adding/removing/filtering entries</p>
-          <p>Tools Used:</p>
-          <ul>
-            <li>Vanilla JavaScript</li>
-            <li>SCSS</li>
-            <li>Babel/Webpack</li>
-          </ul>
+  <div class="container">
+    <header>
+      <div class="back-btn-container">
+        <a href="index.html"><i class="fa fa-chevron-left" aria-hidden="true"></i>Back</a>
+      </div>
+      <h1>Portfolio</h1>
+    </header>
+    <div class="projects-container">
+      <div class="project-type">
+        <h2 class="project-type__title">ui design</h2>
+        <div class="project">
+          <h3 class="project-title">vibz</h3>
+          <div class="project-details">
+            <p class="details__project-desc">This is my first full UI design project! Up until now, I’ve just been reading about design principles, UX principles, and playing around with the DailyUI challenges to strengthen my visual design skills and familiarity with prototopying tools (I mainly use Figma right now). </p>
+            <ul class="details__design-proj-links proj-links">
+              <li><a href="https://docs.google.com/document/d/1P_kqjvvTvqSHb0KntwUdRPjXSpveN6-YYb8G0RSM5nU/edit?usp=sharing" target="_blank">Read about my process</a></li>
+              <li><a href="https://drive.google.com/open?id=1vZSMLqT4ZzCIzl_vjEYzapwVa1UrkhVy" target="_blank">View final mockups (google folder)</a></li>
+              <li><a href="https://www.figma.com/file/FlP69BSQTeYZzBmSMmW6gy/Vibz-Blog-Wireframes?node-id=7%3A3" target="_blank">View final mockups (Figma Workspace)</a></li>
+            </ul>
+            <p class="subtitle">Trying to be cool and make animated mockups (didn't work out too well)</p>
+            <img src="img/laptop-tablet-mockupgif.gif" alt="Laptop and tablet mockups for this mens website concept."/>
+            <img src="img/android-mockup.gif" alt="">
+          </div>
         </div>
       </div>
-
-      <div class="project-container">
-        <img src="images/rss_feed.png" alt="">
-        <div class="project-desc">
-          <h3>RSS Feed</h3>
-          <a href="">Code •</a>
-          <a href="">Live Demo</a>
-          <hr>
-          <p>RSS Feed that fetches from News API for the top headlines of the day.</p>
-          <p>Supports filtering news sources and searching queries.</p>
-          <p>Tools Used:</p>
-          <ul>
-            <li>React</li>
-            <li>SCSS</li>
-          </ul>
+      <div class="project-type">
+        <h2 class="project-type__title">programming</h2>
+        <div class="project">
+          <h3 class="project-title">Budget Tracker V1</h3>
+          <div class="project-details">
+            <ul class="details__programming-proj-links proj-links">
+              <li><a href="https://github.com/janet-yu/budget_app" target="_blank">Code</a></li>
+              <li>▪</li>
+              <li><a href="https://immense-oasis-49206.herokuapp.com/" target="_blank">Live Demo</a></li>
+            </ul>
+            <p class="project-desc">Simple budget tracker that supports adding/removing/filtering entries. The next version
+            will support saving your transactions data in an account (hoping to get to this soon!).</p>
+            <img src="img/budget_tracker.png" alt="">
+            <h4 class="tools-used-title">Tools Used</h4>
+            <ul class="tools-used-list">
+              <li>Vanilla JavaScript</li>
+              <li>SCSS</li>
+              <li>Babel/Webpack</li>
+            </ul>
+          </div>
+        </div>
+        <div class="project">
+          <h3 class="project-title">RSS Feed</h3>
+          <div class="project-details">
+            <ul class="details__programming-proj-links proj-links">
+              <li><a href="https://github.com/janet-yu/rss_feed" target="_blank">Code</a></li>
+              <li>▪</li>
+              <li><a href="https://competent-ramanujan-aa0745.netlify.com/" target="_blank">Live Demo</a></li>
+            </ul>
+            <p class="details__project-desc">RSS Feed that fetches from News API for the top headlines of the day.</p>
+            <img src="img/rss_feed.png" alt="">
+            <h4 class="tools-used-title">Tools used</h4>
+            <ul class="tools-used-list">
+              <li>React</li>
+              <li>SCSS</li>
+            </ul>
+          </div> <!-- div project-details -->
         </div>
       </div>
-
     </div>
+  </div>
 
-    <hr>
-
-    <div class="ui-imgs">
-      <h2 id="ui-title">UI Designs</h2>
-      <p>Some UI designs inspired by the DailyUI challenge!</p>
-      <a href="images/003landingpageconcept.jpeg"><img src="images/003landingpageconcept.jpeg" alt=""></a>
-      <a href="images/002Checkout2.jpeg"><img src="images/002Checkout2.jpeg" alt=""></a>
-      <a href="images/11flash.jpeg"><img src="images/11flash.jpeg" alt=""></a>
-      <a href="images/signup_ui.jpg"><img src="images/signup_ui.jpg" alt=""></a>
-    </div>
-  </main>
 </body>
 </html>
