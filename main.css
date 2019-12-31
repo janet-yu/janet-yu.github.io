@@ -39,6 +39,7 @@ svg {
   bottom: 0;
   right: 0;
   z-index: -1;
+  filter: grayscale(0%);
 }
 /* design for mobile first */
 
