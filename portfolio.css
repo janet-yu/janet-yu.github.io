@@ -69,7 +69,7 @@ img:first-of-type {
 }
 /* design for mobile */
 h1 {
-  font-size: 2em;
+  font-size: 1.6em;
 }
 
 .container {
@@ -84,8 +84,6 @@ header {
 
 .back-btn-container {
   margin-bottom: .7em;
-  display: flex;
-  align-items: center;
 }
   .fa-chevron-left {
     margin-right: .5em;
@@ -101,7 +99,7 @@ header {
   }
 
 .project-type__title {
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
 
 .project-title {
@@ -115,7 +113,7 @@ header {
 }
 
 .project {
-  margin: 1.2em;
+  margin: 2em 0 1.5em 0;
 }
 
 .project-details {
@@ -145,7 +143,7 @@ header {
 }
 
 .details__design-proj-links a::after {
-  content: '▶';
+  content: '\25BA';
   display: inline-block;
   position: relative;
   left: .5em;
