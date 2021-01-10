@@ -5,9 +5,9 @@
 }
 
 html {
-  background:linear-gradient(to bottom right, #1C1E25 50%, #81516B);
+  background: linear-gradient(to bottom right, #1c1e25 50%, #81516b);
   height: 100vh;
-  font-family: "Karla", "Archivo", sans-serif;
+  font-family: 'Karla', 'Archivo', sans-serif;
   position: relative;
 }
 
@@ -15,14 +15,14 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Archivo";
+  font-family: 'Archivo';
   letter-spacing: 15px;
   text-transform: uppercase;
-  color: #FFF;
+  color: #fff;
 }
 
 a {
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -54,27 +54,27 @@ svg {
   margin: 40px 0 40px 0;
   text-align: center;
 }
-  .name {
-    font-weight: lighter;
-    position: relative;
-    display: inline;
-    font-size: 1.6em;
-  }
+.name {
+  font-weight: lighter;
+  position: relative;
+  display: inline;
+  font-size: 1.6em;
+}
 
-  .name::after {
-    content: 'Janet Yu';
-    position: absolute;
-    left: 0;
-    top: 64%;
-    -moz-transform: scale(1, -1);
-    -webkit-transform: scale(1, -1);
-    -o-transform: scale(1, -1);
-    -ms-transform: scale(1, -1);
-    transform: scale(1, -1);
-    background: -webkit-linear-gradient(rgba(255, 255, 255, 2%) 30%, #704D81);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+.name::after {
+  content: 'Janet Yu';
+  position: absolute;
+  left: 0;
+  top: 64%;
+  -moz-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 2%) 30%, #704d81);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .navigation {
   text-align: center;
@@ -84,7 +84,7 @@ svg {
   text-transform: uppercase;
   font-size: 1.3em;
   line-height: 1.7;
-  font-family: "Archivo", sans-serif;
+  font-family: 'Archivo', sans-serif;
   letter-spacing: 1px;
 }
 
@@ -190,11 +190,11 @@ svg {
     height: 2px;
     width: 100%;
     transform: scaleX(0);
-    background-color: #FF9BBF;
-    transition: all .5s ease;
+    background-color: #ff9bbf;
+    transition: all 0.5s ease;
   }
 
-  a:hover::after{
+  a:hover::after {
     transform: scaleX(1);
   }
 }
